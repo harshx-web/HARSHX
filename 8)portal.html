@@ -1,0 +1,145 @@
+<!-- portal.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal | HarshX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #000;
+    }
+    header {
+      background: #c0c0c08e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+    }
+    .logo-title img {
+      width: 60px;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+    }
+    .main {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    .main h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .portal-boxes {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 2rem;
+    }
+    .box {
+      background: #f5f5f7;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    .box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .box p {
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    .enter-btn {
+      padding: 0.6rem 1.5rem;
+      background-color: #0071e3;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .enter-btn:hover {
+      background-color: #005bb5;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f2f2f2;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title" onclick="location.href='index.html'">
+      <img src="LOGO.png" alt="HarshX Logo">
+      <span>HARSHX</span>
+    </div>
+    <nav>
+      <a href="index.html" >Home</a>
+      <a href="about.html">About</a>
+      <a href="portal-login.html" style="color: #0071e3; font-weight: bold;">Portal</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <h1>HarshX Portal</h1>
+    <div class="portal-boxes">
+      <div class="box">
+        <h2>WORK DATA</h2>
+        <p>Track your assignments, submissions, and deadlines efficiently with your dedicated work module.</p>
+        <a class="enter-btn" href="workdata-login.html">Enter</a>
+      </div>
+      <div class="box">
+        <h2>VIT ZONE</h2>
+        <p>Get access to academic tools, links, and essential resources tailored for VIT students.</p>
+        <a class="enter-btn" href="vitzone-login.html">Enter</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div style="position: relative; width: 100%; text-align: center;">
+      <p>Copyright © 2025 | HARSHX</p>
+      <span style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #555;">INDIA</span>
+    </div>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const currentPage = window.location.pathname.split("/").pop().split(".")[0];
+    links.forEach(link => {
+      if (link.dataset.page === currentPage) {
+        link.style.color = "#0071e3";
+        link.style.fontWeight = "bold";
+      }
+    });
+  </script>
+</body>
+</html>

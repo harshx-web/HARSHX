@@ -1,0 +1,57 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HarshX | Haneesh's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+</head>
+<link rel="stylesheet" href="styles.css" />
+<body>
+  <header>
+    <div class="logo-title" onclick="location.href='index.html'">
+      <img src="LOGO.png" alt="HarshX Logo">
+      <span>HARSHX</span>
+    </div>
+    <nav>
+      <a href="index.html" style="color: #0071e3; font-weight: bold;">Home</a>
+      <a href="about.html" >About</a>
+      <a href="portal-login.html">Portal</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+<script>
+  const links = document.querySelectorAll(".nav-link");
+  const currentPage = window.location.pathname.split("/").pop().split(".")[0];
+  links.forEach(link => {
+    if (link.dataset.page === currentPage) {
+      link.style.color = "#0071e3";
+      link.style.fontWeight = "bold";
+    }
+  });
+</script>
+  <section class="hero">
+    <h1>WELCOME TO HARSHX</h1>
+    <p>Developer | Innovator | Creator of HarshX — your ultimate productivity portal.</p>
+    <div class="buttons">
+      <a href="about.html">Learn About Me</a>
+      <a href="portal-login.html">Explore HarshX Portal</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Project</h2>
+    <p><strong>HarshX</strong> is a personalized productivity suite with VIT integrations, work tracking, and dashboard features — designed by me for smart living and smarter studying.</p>
+  </section>
+
+  <footer>
+    <div style="position: relative; width: 100%; text-align: center;">
+        <p>Copyright © 2025 | HARSHX</p>
+        <span style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #555;">INDIA</span>
+      </div>
+  </footer>
+</body>
+</html>

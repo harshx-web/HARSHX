@@ -1,0 +1,111 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | HarshX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafa;
+      color: #000;
+    }
+    header {
+      background: #e5e5e5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .logo-title img {
+      width: 50px;
+      height: 50px;
+    }
+    .logo-title span {
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #0071e3;
+    }
+    main {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    main h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .about-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .about-box p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      text-align: center;
+      background: #eee;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title" onclick="location.href='index.html'">
+      <img src="LOGO.png" alt="HarshX Logo">
+      <span>HARSHX</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" style="color: #0071e3; font-weight: bold;">About</a>
+      <a href="portal-login.html">Portal</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Me</h1>
+    <div class="about-box">
+      <p>
+        I'm Haneesh, a passionate developer and creative thinker. HarshX is my vision of merging productivity tools with a personal touch. I enjoy designing digital experiences that are functional, clean, and tailored to users' needs. This platform represents my growth as a developer, an innovator, and someone who believes in building for the future.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div style="position: relative; width: 100%; text-align: center;">
+      <p>Copyright © 2025 | HARSHX</p>
+      <span style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #555;">INDIA</span>
+    </div>
+  </footer>
+</body>
+</html>
